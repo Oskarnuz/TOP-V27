@@ -7,7 +7,7 @@ function myFunction(a, b){
     for(let i = 0; i < a.length; i++){
         newArr.push([a[i], b[i]])      
     } 
-    console.log(Object.fromEntries(newArr));
+    return Object.fromEntries(newArr);
 }
 
 myFunction(['a','b','c'],[1,2,3]);
