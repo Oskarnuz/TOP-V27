@@ -5,8 +5,8 @@ Devuelve el valor de la propiedad 'b' del objeto 'a' dentro del objeto original 
 
 // Ejercicio 1
 function myFunction(obj) {
-    return ('a' in obj === true ? obj?.a?.b : undefined);
-  }
+  return obj.hasOwnProperty("a") === true ? obj?.a?.b : typeof obj === 'object' ? myFunction(Object.values(obj)[0]) : undefined;
+}
 
 console.log(myFunction({a:1}));          //undefined
 console.log(myFunction({a:{b:{c:3}}}));  //{c:3}
