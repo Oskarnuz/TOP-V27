@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    
+    }
+.container {
+    background-color: hsl(204, 43%, 93%);
+    width: 100%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   ;
+}
+.card {
+    height: 70%;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "join join""monthly why";
+    border-radius: 20px;
+    max-width: 960px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+
+}
+.join {
+    background-color: white;
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    grid-area: join;
+    padding: 0 45px ;
+    border-radius: 15px 15px 0 0;
+    
+}
+.join h1 {
+    font-family: 'Karla', sans-serif;
+    font-size: 28px;
+    color: hsl(179, 62%, 43%);
+    padding-bottom: 15px;
+}
+.join h3 {
+    font-family: 'Karla', sans-serif;
+    font-size: 22px;
+    color: hsl(71, 73%, 54%);
+    padding-bottom: 15px;
+}
+.join p {
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-size: bolder;
+    color: hsl(218, 22%, 67%);
+}
+.monthly {
+    background-color: hsl(179, 62%, 43%);
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    grid-area: monthly;
+    padding: 0 45px;
+    border-bottom-left-radius: 15px;
+}
+.monthly h2 {
+    color: hsl(204, 43%, 93%);
+    font-size: 26px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+}
+.monthly p {
+    color: hsl(207, 10%, 83%);
+    font-size: 22px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+}
+.monthly a {
+    display: block;
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    background-color: hsl(71, 73%, 54%);
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 15px 0;
+    border-radius: 6px;
+    margin-top: 30px;
+    height: 55px;
+}
+.monthly span {
+    font-size: 34px;
+    font-weight: bolder;
+}
+.why {
+    background-color: hsl(179, 49%, 66%);
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    grid-area: why;
+    padding: 0 45px;
+    padding-bottom: 15px;
+    border-bottom-right-radius: 15px;
+    gap: 10px;
+}
+.why h2 {
+    color:hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+    font-size: 25px;
+   
+}
+.why ul {
+    list-style: none;
+
+}
+.why li {
+    color: hsl(204, 43%, 93%);
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    padding-bottom: 8px;
+}
+
+@media only screen and (max-width: 425px) {
+    .container {
+        height: auto;
+        padding: 40px 10px;
+    }
+    .card {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 320px);
+        grid-template-areas: "join""monthly""why";
+        height: 70%;
+        width: 90%;
+        display: grid;
+    }
+    .join {
+        grid-area: join;
+        border-radius: 10px 10px 0 0;
+    }
+    .join h1 {
+        font-size: 25px;
+    }
+    .join h3 {
+        font-size: 18px;
+    }
+    .join p {
+        font-size: 15px;
+    }    
+    .monthly {
+        border-bottom-left-radius: 0;
+    }    
+    .monthly h2 {
+        font-size: 22px;
+    }
+    .monthly p {
+        font-size: 20px; 
+    }
+    .monthly a {
+        font-size: 15px;
+    }
+    .monthly span {
+        font-size: 30px;
+    }
+    .why {
+        border-radius: 0 0 10px 10px;
+    }
+    .why h2 {
+        font-size: 22px;
+    }
+    .why ul {
+        list-style: none;
+    
+    }
+    .why li {
+        font-size: 12px;
+    } 
+}
